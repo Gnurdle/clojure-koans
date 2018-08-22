@@ -1,10 +1,11 @@
 (defproject clojure-koans "0.5.1-SNAPSHOT"
   :description "The Clojure koans."
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [koan-engine "0.2.4"]]
   :dev-dependencies [[lein-koan "0.1.4"]]
   :profiles {:dev {:dependencies [[lein-koan "0.1.4"]]}}
   :repl-options {:init-ns koan-engine.runner
                  :init ^:displace (do (use '[koan-engine.core]))}
-  :plugins [[lein-koan "0.1.4"]]
+  :plugins [[lein-koan "0.1.4"]
+            [lein-ancient "0.6.15"]]
   :main koan-engine.runner/exec)
